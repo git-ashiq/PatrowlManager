@@ -211,6 +211,7 @@ class Asset(models.Model):
     created_at  = models.DateTimeField(default=timezone.now)
     updated_at  = models.DateTimeField(default=timezone.now)
     teams       = models.ManyToManyField('users.team', blank=True)
+    image       = models.ImageField(updated_to='poc_image', blank=True)
 
     class Meta:
         """Metadata: DB name."""
