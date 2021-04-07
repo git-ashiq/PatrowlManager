@@ -27,7 +27,7 @@ class FindingForm(forms.ModelForm):
     class Meta:
         model = Finding
         fields = ['title', 'type', 'severity', 'status', 'description', 'tags',
-            'solution', 'risk_info', 'vuln_refs', 'links', 'comments', 'asset']
+            'solution', 'risk_info', 'vuln_refs', 'links', 'comments', 'asset', 'image']
         widgets = {
             'description': forms.Textarea(
                 attrs={'class': 'form-control form-control-sm'}),
@@ -52,6 +52,8 @@ class FindingForm(forms.ModelForm):
             'status': forms.Select(
                 attrs={'class': 'form-control form-control-sm'}),
             'asset': forms.Select(
+                attrs={'class': 'form-control form-control-sm'}),
+            'image': forms.ImageField(
                 attrs={'class': 'form-control form-control-sm'})
         }
 

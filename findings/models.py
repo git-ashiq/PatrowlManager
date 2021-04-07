@@ -228,7 +228,7 @@ class Finding(models.Model):
     checked_at  = models.DateTimeField(default=timezone.now)
     created_at  = models.DateTimeField(default=timezone.now)
     updated_at  = models.DateTimeField(default=timezone.now)
-
+    image       = models.ImageField(upload_to="poc", blank=true)
     objects = FindingManager()
 
     class Meta:

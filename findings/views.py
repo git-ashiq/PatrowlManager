@@ -226,6 +226,7 @@ def add_finding_view(request):
                 'asset': form.cleaned_data['asset'],
                 'asset_name': form.cleaned_data['asset'].value,
                 'raw_data': {},
+                'image': form.cleaned_data['image'],
                 'engine_type': 'MANUAL'
                 # 'scan': form.cleaned_data['scan']
             }
